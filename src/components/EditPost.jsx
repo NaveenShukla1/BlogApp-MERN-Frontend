@@ -15,7 +15,7 @@ function EditPost() {
     e.preventDefault()
  
 
-    axios.put('http://localhost:3001/editPost/'+id, {title, description})
+    axios.put('https://blog-app-mern-backend.vercel.app/'+id, {title, description})
     .then(res => {
       if (res.data === "Success"){
         // navigate - doesnt reload the page 
@@ -26,7 +26,7 @@ function EditPost() {
   }
 
   useEffect(() =>{
-    axios.get(`http://localhost:3001/getPostById/${id}`)
+    axios.get(`https://blog-app-mern-backend.vercel.app/${id}`)
     .then(result => {
         setTitle(result.data.title)
         setDescription(result.data.description)
