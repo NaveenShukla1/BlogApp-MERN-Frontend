@@ -11,7 +11,7 @@ function Navbar() {
   const navigate = useNavigate()
 
   const handleLogout = () =>{
-    axios.get('http://localhost:3001/logout')
+    axios.get('https://blog-app-mern-backend.vercel.app/logout')
     .then (res => {
       if (res.data === "Success")
       // navigate to the same page (refresh)
