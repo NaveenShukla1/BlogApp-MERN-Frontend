@@ -20,7 +20,7 @@ function Create() {
     formData.append('file', file)
     formData.append('email', user.email)
 
-    axios.post('http://localhost:3001/create', formData)
+    axios.post('https://blog-app-mern-backend.vercel.app/create', formData)
     .then(res => {
       if (res.data === "Success"){
         // to reload the page 
