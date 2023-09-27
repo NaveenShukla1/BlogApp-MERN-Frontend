@@ -13,13 +13,13 @@ function Post() {
   const user = useContext(userContext)
 
   useEffect(() =>{
-    axios.get(`http://localhost:3001/getPostById/${id}`)
+    axios.get(`https://blog-app-mern-backend.vercel.app/getPostById/${id}`)
     .then(result => setPost(result.data))
     .catch(err => console.log(err))
   }, [])
 
   const handleDelete = (id) =>{
-    axios.delete(`http://localhost:3001/deletePost`, {id: id}).then(result => {
+    axios.delete(`https://blog-app-mern-backend.vercel.app/deletePost`, {id: id}).then(result => {
       navigate('/')
     })
     .catch(err => console.log(err))
